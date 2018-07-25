@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>去中心化微博demo</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  
+        <style>
+             .margin-top-1{
+               margin-top: lem;
+             }
+        </style>
+</head>
+<body class="container" style="margin-top:20px">
+
+  <h2 style="text-align:center">微博demo</h2>
+
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#sectionA" id="home_tab"><i class="fa fa-user"></i>微博平台</a></li>
+      <li><a data-toggle="tab" href="#sectionB" id="weibo_tab"><i class="fa fa-university"></i>我的微博</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div id="sectionA" class="tab-pane fade in active">
+        <div class="panel panel-primary margin-top-1">
+          <div class="panel-heading">
+            <h3 class="panel-title">平台信息</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td>平台地址</td>
+                  <td id="plantformAccount"></td>
+                </tr>
+                <tr>
+                  <td>平台打赏</td>
+                  <td id="plantformBalance">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">已注册微博用户</h3>
+          </div>
+          <div class="panel-body">
+            <div>
+              <table class="table table-striped">
+                <tr>
+                  <td>id</td>
+                  <td>name</td>
+                  <td>Address</td>
+                </tr>
+                <tbody id="weiboList">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        </hr>
+        <div class="panel panel-primary text-center">
+          <div class="panel-heading">
+            <h3 class="panel-title">已注册微博账户</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td style="text-align:left">微博名字</td>
+                  <td>
+                    <input type="text" class="form-control" id="weiboName" placeholder="微博名字">
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:left">微博地址</td>
+                  <td>
+                    <input type="text" class="form-control" id="weiboAddress" placeholder="微博地址">
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2">
+                    <button id="registerBtn" class="btn btn-primary">注册</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="sectionB" class="tab-pane fade">
+        <div class="panel panel-primary margin-top-1">
+          <div class="panel-heading">
+            <h3 class="panel-title">账户信息</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td>昵称</td>
+                  <td id="myName"></td>
+                </tr>
+                <tr>
+                  <td>打赏</td>
+                  <td id="myBalance"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">发微博</h3>
+          </div>
+          <div class="panel-body">
+            <div>
+              <textarea id="weiboContent" style="width:700px;height:200px;overflow:scroll;resize:none;"></textarea>
+              <button id="sendweiboBtn" class="btn btn-primary">发送</button>
+            </div>
+          </div>
+        </div>
+        <!------>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">我的微博</h3>
+          </div>
+          <div class="panel-body">
+            <div>
+              <div>
+                <table class="table table-striped">
+                  <tr>
+                    <td>id</td>
+                    <td>content</td>
+                    <td>timestamp</td>
+                  </tr>
+                  <tbody id="weiboContentList">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+     </div>
+  </div>
+</tbody>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!---引用页面逻辑脚本--->
+<script src="./app.js"></script>
+</html>
